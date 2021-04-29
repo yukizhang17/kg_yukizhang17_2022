@@ -12,6 +12,9 @@ var argv = process.argv;
 var input = argv.slice(2);
 console.log(input);
 
+/* Create a variable final to hold the final phonetic string. */
+var final = "";
+
 /* Loop through each input */
 for (var i = 0; i < input.length; i++) {
     var num = input[i];
@@ -21,6 +24,7 @@ for (var i = 0; i < input.length; i++) {
     for (var j = 0; j < num.length; j++) {
         val = val + num_to_str[num[j]]
     };
-    console.log(val)
-
+    //console.log(val)
+    var final = final + val;
+    console.log(final);
 };
