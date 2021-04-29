@@ -10,7 +10,6 @@ var num_to_str = {"0":"Zero", "1":"One", "2":"Two", "3":"Three", "4":"Four", "5"
 /* Get the input array from argv and extract them out */
 var argv = process.argv;
 var input = argv.slice(2);
-console.log(input);
 
 /* Create a variable final to hold the final phonetic string. */
 var final = "";
@@ -24,7 +23,14 @@ for (var i = 0; i < input.length; i++) {
     for (var j = 0; j < num.length; j++) {
         val = val + num_to_str[num[j]]
     };
-    //console.log(val)
-    var final = final + val;
-    console.log(final);
+    /* If this is not the last input, add , to the end of the conversion */
+    if (i == input.length - 1){
+        var final = final + val;
+    }
+    else{
+        var final = final + val + ",";
+    };
 };
+
+/* print the output into stdout*/
+console.log(final);
