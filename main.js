@@ -15,8 +15,12 @@ console.log(input);
 /* Loop through each input */
 for (var i = 0; i < input.length; i++) {
     var num = input[i];
-    //console.log(num)
+    /* Create a variable val hold the conversion for each input value */
+    var val = "";
+    /* Loop through each number in the input and do the conversion respectively */
     for (var j = 0; j < num.length; j++) {
-        console.log(num[j])
+        val = val + num_to_str[num[j]]
     };
+    console.log(val)
+
 };
