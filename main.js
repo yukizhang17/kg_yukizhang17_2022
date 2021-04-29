@@ -11,3 +11,12 @@ var num_to_str = {"0":"Zero", "1":"One", "2":"Two", "3":"Three", "4":"Four", "5"
 var argv = process.argv;
 var input = argv.slice(2);
 console.log(input);
+
+/* Loop through each input */
+for (var i = 0; i < input.length; i++) {
+    var num = input[i];
+    //console.log(num)
+    for (var j = 0; j < num.length; j++) {
+        console.log(num[j])
+    };
+};
